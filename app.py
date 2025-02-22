@@ -109,3 +109,5 @@ def index():
 if __name__ == '__main__':
     import_member()
     app.run(debug=True)
+    port = int(os.getenv("PORT", 5000))  # Render sets PORT, default to 5000 locally
+    app.run(host='0.0.0.0', port=port)
